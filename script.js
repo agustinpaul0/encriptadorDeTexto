@@ -8,7 +8,7 @@ const informacion = document.querySelector(".informacion");
 function Numeros(string){//Solo minúsculas y sin acentos ni caracteres especiales
 
     var out = '';
-    var filtro = 'abcdefghijklmnñopqrstuvwxyz1234567890';//Caracteres validos
+    var filtro = 'abcdefghijklmnñopqrstuvwxyz1234567890?¿¡!""/()%$.,#& ';//Caracteres validos
 	
     //Recorrer el texto y verificar si el caracter se encuentra en la lista de validos 
     for (var i=0; i<string.length; i++)
@@ -18,7 +18,7 @@ function Numeros(string){//Solo minúsculas y sin acentos ni caracteres especial
 	
     //Retornar valor filtrado
     return out;
-    
+
 } 
 
 function btnEncriptar() {
@@ -47,9 +47,13 @@ function encriptar(stringEncriptado) {
 	munheco.style.display = "none";
 	munhecoText.style.display = "none";
 	informacion.style.display = "none";
+	txtCifrado.style.display = "block";
+	document.querySelector(".resultado").style.display = "block";
 	txtCifrado.innerHTML = stringEncriptado;
 	document.querySelector(".copiar").style.display = "show";
 	document.querySelector(".copiar").style.display = "inherit";
+	document.querySelector(".limpiar").style.display = "show";
+	document.querySelector(".limpiar").style.display = "inherit";
 
 	return stringEncriptado;
 
@@ -80,9 +84,13 @@ function desencriptar(stringDesencriptado) {
 	munheco.style.display = "none";
 	munhecoText.style.display = "none";
 	informacion.style.display = "none";
+	txtCifrado.style.display = "block";
+	document.querySelector(".resultado").style.display = "block";
 	txtCifrado.innerHTML = stringDesencriptado;
 	document.querySelector(".copiar").style.display = "show";
 	document.querySelector(".copiar").style.display = "inherit";
+	document.querySelector(".limpiar").style.display = "show";
+	document.querySelector(".limpiar").style.display = "inherit";
 
 	return stringDesencriptado;
 }
@@ -98,6 +106,7 @@ function copiar(texto) {
 	mensaje.select();
 	navigator.clipboard.writeText(mensaje.value);
 	mensaje.value = "";
-	alert("Texto copiado");
-
+	swal("¡Texto copiado con éxito!","Se lo redireccionará al inicio","success").then(function(){
+    location.reload();
+})
 }

@@ -35,6 +35,7 @@ header{
 	border: none;
 	outline: none;
 	background: #F3F5FC;
+	overflow: auto;
 }
 .right{
 	width: 30%;
@@ -43,9 +44,10 @@ header{
 	border-radius: 24px;
 	background: white;
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
 }
 .img-munheco{
-	margin-top: 20%;
+	margin-top: 27%;
 	width: 90%;
 	height: auto;
 	margin-left: 5%;
@@ -56,27 +58,35 @@ header{
 .informacion{
 	text-align: center;
 }
+.resultado{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	margin-left: 5%;
+	margin-top: 5%;
+	box-sizing: border-box;
+	display: none;
+}
 .texto2-munheco{
 	float: left;
-	margin-left: 10%;
+	margin-left: 5%;
 	color: #0A3871;
 	width: 80%;
 	height: auto;
 	border: none;
 	outline: none;
-	font-size: 15px;
+	font-size: 20px;
 	resize: none;
 }
 .copiar{
-	margin-left: 33%;
-	margin-top: 90%;
+	margin-left: 21%;
 	padding: 24px;
-	width: 40%;
+	width: 60%;
 	height: 10%;
 	background: #D8DFE8;
 	border-radius: 24px;
 	display: none;
-	margin-top: 610px;
+	margin-top: 565px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 }
@@ -99,7 +109,7 @@ header{
 .btn-encriptar{
 	padding: 24px;
 	width: 30%;
-	height: 60%;
+	height: 40%;
 	border-radius: 24px;
 	margin-left: 10%;
 	background: #0A3871;
@@ -136,4 +146,7 @@ header{
 	font-weight: bold;
 	margin-top: 700px;
 	padding: 100px;
+}
+.ocultar{
+	display: none;
 }
